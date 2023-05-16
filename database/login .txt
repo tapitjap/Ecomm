@@ -1,0 +1,23 @@
+
+database name:ecomm
+
+
+
+
+
+
+logins 
+
+ 
+Admin Side
+
+Username: admin@admin.com
+
+Password: password
+
+
+Customer Side
+
+Username: jude@yahoo.com
+
+Password: 123

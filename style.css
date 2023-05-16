@@ -1,0 +1,267 @@
+html {
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+}
+body {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    max-width: 1400px;
+    max-height: 700px;
+}
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    min-height: 10vh;
+    align-items: center;
+    background-color: #CDDCFF;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+/* nav .logo {
+    width: ;
+} */
+nav .logo a {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    
+    transition: all .3s ease-in-out;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+nav .logo a:hover {
+    background-color: black;
+    color: #FBFF4E;
+    padding: 6px 9px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+nav .links {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+nav .links .fa {
+    font-size: 36px; 
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+nav .links .fa:hover {
+    color: #FBFF4E;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+@media all and (max-width: 600px) {
+    nav .links {
+        width: 40vw;
+    }
+    nav .logo {
+        font-size: 20px;
+    }
+    nav .links .fa {
+        font-size: 25px;
+    }
+}
+
+/*
+    --Main--
+    Lannding Page
+*/
+main {
+    width: 100vw;
+    padding: 0vh 10vw;
+    margin-top: 10vh;
+    height: 90vh;
+
+    background-color: #CDDCFF;
+    
+    background-image: url(images/e-com_BG\ IMAGE.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 60rem;
+}
+main:hover {
+    background-size: 70rem;
+}
+
+main .container {
+    width: 70vw;
+    height: 70vh;
+    /* background-color: aliceblue; */
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container header {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 50%;
+
+    background-image: url(images/Paint_stroke-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.container header h1::after {
+    content: "";
+
+    position: absolute;
+    width: 50vw;
+    height: 30vh;
+    top: 0;
+    transform: translate(-80%, 93%);
+
+    background-image: url(images/Line_Stroke-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container div.p-b{
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.container div.p-b > div > p{
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.container div.p-b div .shop-now-btn {
+    cursor: pointer;
+    background-color: #FBFF4E;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-weight:600;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container div.p-b > div > .shop-now-btn:hover {
+    background-color: rgb(22, 22, 22);
+    color: #FBFF4E;
+    padding: 18px 22px;
+    font-size: 18px;
+}
+
+
+/* 
+    --main--
+    Form for log-in and sign-up 
+*/
+main .container .form {
+    width: 350px;
+    height: 500px;
+    background-color: #fff6e49a;
+    border-radius: 30px;
+    padding: 1.8rem;
+    margin: 3rem;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .container .form:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+main .container .form .form-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container .form .form-btn button {
+    cursor: pointer;
+    background-color: #FBFF4E;
+    border: none;
+    color: rgb(27, 26, 26);
+    border-radius: 25px;
+    padding: 9px 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+main .container .form .text-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .container .form .text-box input {
+    margin: 1rem .5rem;
+    padding: .8rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #bdb4a198;
+}
+
+@media all and (max-width: 700px){
+
+    nav .logo a:hover {
+        padding: 5px 9px;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+    nav .links {
+        justify-content: end;
+    }
+    nav .links a {
+        margin: 0 8px;
+    }
+    nav .links .fa {
+        font-size: 19px;
+    }
+
+    /* Landing Page */
+    .container header {
+        font-size: 5vw;
+    }
+    .container header h1::after {
+        transform: translate(-83%, 95%);
+        width: 95vw;
+    }
+    .container div.p-b > div > p{
+        font-size: 4vw;
+    }
+
+    main .container .form {
+        width: 80vw;
+        height: 90vh;
+    }
+}

@@ -1,0 +1,96 @@
+<?php include 'includes/session.php'; ?>
+<?php
+  if(isset($_SESSION['user'])){
+    header('location: cart_view.php');
+  }
+?>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <?php
+      if(isset($_SESSION['error'])){
+        echo "
+          <div class='callout callout-danger text-center'>
+            <p>".$_SESSION['error']."</p> 
+          </div>
+        ";
+        unset($_SESSION['error']);
+      }
+      if(isset($_SESSION['success'])){
+        echo "
+          <div class='callout callout-success text-center'>
+            <p>".$_SESSION['success']."</p> 
+          </div>
+        ";
+        unset($_SESSION['success']);
+      }
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends Log In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,700;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+    <!-- Logo -->
+    <div class="logo">
+        <a href="main-page.php">
+            Furry&nbsp;Friends
+        </a>
+      </div>
+
+    <!-- Links -->
+      <div class="links">
+        <a href="#">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-twitter"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- End of navigation bar -->
+    
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <div class="form">
+                <div>
+                    <h1>Login to your account</h1>
+                </div>
+
+        <form action="verify.php" method="POST">
+                <div class="text-box">
+                    <input type="email" name="email" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-btn">
+                    <button type="submit"name="login"> Login</button>
+                    <br>
+                    <p>
+        <form>
+                        or
+                        <span>
+                            <a href="signup.html">sign up</a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
